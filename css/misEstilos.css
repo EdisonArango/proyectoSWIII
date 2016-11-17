@@ -1,0 +1,22 @@
+#lista-izquierda {
+    width: 25%;
+    display: inline-block;
+}
+
+#two{
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
+
+#a{
+   width: 25%;
+   display: inline-block; 
+}
+#two{
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clase ViveLab Acacias</title>
+        <link rel="stylesheet" href="https://openlayers.org/en/v3.19.0/css/ol.css" type="text/css">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css" >
+        <link rel="stylesheet" href="css/misEstilos.css" type="text/css">
+        <!--<link rel="stylesheet" href="css/popup.css">-->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="imagenes/favicon.ico">
+</head>
+
+<body>
+
+<div data-role="page" id="page0" >
+
+	<div data-role="header" data-theme="b">
+		<h1>Pagina de inicio</h1>	
+		<a href="#" class="ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all">No text</a>
+		<a href="#page0" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+			<form>
+                            <label for="text-6">Buscar </label>
+                            <input type="text" name="text-6" id="Nombre_finca" value="" placeholder="">	      
+			</form>	    
+
+		
+		<button id = "boton_1" onclick="eventoBoton()" class="ui-btn">Consultar</button>
+
+                
+                <!--<div id="map" class="map"><div id="popup"></div></div>-->   
+                <div id="mapa" class="map" style="width: 100%; height:350px; background-color: whitesmoke">
+                    <div id="popup"></div>
+                </div>
+                <div id="contenedorLista">
+                </div>
+        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
+            <li><a href="#">Unillanos</a></li>
+            <li><a href="#">Universidad Cooperativa</a></li>
+            <li><a href="#">Parque fundadores</a></li>
+            <li><a href="#">Postobón gaseosas del llano</a></li>
+            <li><a href="#">Colegio Cofrem</a></li>
+            <li><a href="#">Unicentro</a></li>
+            <li><a href="#">Cristo Rey</a></li>
+        </ul>        
+<!--        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
+                <li><a href="#">Unillanos</a></li>
+                <li><a href="#">Universidad Cooperativa</a></li>
+                <li><a href="#">Parque fundadores</a></li>
+                <li><a href="#">Postobón gaseosas del llano</a></li>
+                <li><a href="#">Colegio Cofrem</a></li>
+                <li><a href="#">Unicentro</a></li>
+                <li><a href="#">Cristo Rey</a></li>
+        </ul>-->
+         <!--   <div data-role="tabs">
+		<ul id = "a" data-role="listview" class="ui-nodisc-icon ui-alt-icon">
+   		<li><a onclick="eventoBoton()" href="" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-comment">Noticias</a></li>
+    		 <li><a href="#one" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-calendar">Unicentro</a></li>
+    		 <li><a href="#two" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid">Unillanos</a></li>
+		</ul>
+                
+                <ul id="two" class="tablist-content" data-role="listview" data-inset="true">
+                    <li><a href="#one" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-calendar">Historial</a></li>
+    		    <li><a href="#two" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid">Reporte</a></li>
+                </ul>
+            </div>
+		<form>
+                    <label for="text-6">Cedula: </label>
+                    <input type="text" name="text-6" id="cedula" value="" placeholder="1119889438">
+                    <label for="text-7">Nombre: "</label>
+                    <input type="text" data-clear-btn="true" name="text-7" id="nombre" value="" placeholder="Felipe Buitrago">    
+                </form>    
+                -->
+        </div>
+
+	<a href="#page1" class="ui-btn">Pagina 2</a><!-- /button -->
+	<div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="grid">Summary</a></li>
+                <li><a href="#" data-icon="star" class="ui-btn-active">Favs</a></li>
+                <li><a href="#" data-icon="gear">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+		<!--<h4>APP desarrollada en el ViveLab de Acacias 2015</h4>-->
+                <h4>APP desarrollada Por felipe buitrago 2016</h4>
+	</div><!-- /footer -->	
+
+
+</div><!-- /page -->     	
+
+<div data-role="page" id="page1">
+	<div data-role="header" data-theme="b">
+		<h1>Pagina de acceso #2</h1>
+		<a href="#" class="ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all">No text</a>
+		<a href="#page0" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero lectus, volutpat nec vehicula non, aliquam nec risus. Donec a porta tellus, in fermentum leo. Fusce id dapibus lorem. Sed non lobortis lorem, ut ultricies nisi. Nam lorem turpis, luctus interdum rhoncus non, semper at neque. Donec id metus sit amet massa vestibulum interdum. Praesent tincidunt imperdiet diam, gravida consectetur sem mattis at. Pellentesque ornare, sem sed congue lacinia, lorem augue congue odio, quis dapibus turpis diam varius ligula.</p>
+
+		<p>Fusce auctor finibus nunc, a pharetra ante. Phasellus sit amet consequat quam. Pellentesque arcu dolor, tempus eu lobortis id, convallis eu leo. Proin et ex sed felis bibendum blandit ac sit amet lectus. Suspendisse tempor eros et varius ornare. Cras pellentesque lacus ut est egestas, vel feugiat justo tincidunt. Duis ultricies suscipit tellus eu porta. Aliquam erat volutpat. Phasellus eget dictum elit. Nunc accumsan a lorem id imperdiet. Sed volutpat suscipit tellus in suscipit. Sed pellentesque luctus neque, vitae egestas lorem rhoncus porttitor. Ut volutpat ipsum orci, in fringilla tortor sagittis a. In tincidunt odio eget porta tincidunt.</p>
+
+		<p>Vestibulum porta lorem id risus bibendum bibendum. Praesent sem elit, pulvinar a mi vitae, porttitor auctor libero. Quisque dapibus tellus nec dolor mollis efficitur. Nulla eu arcu mollis, commodo nisi at, venenatis nunc. Cras pharetra dignissim quam, et tincidunt leo consequat a. Donec ante lorem, ornare vel risus et, luctus facilisis felis. Maecenas aliquet varius fermentum. In fringilla eleifend sem non mollis.</p>
+		<br>
+		<div data-role="collapsible" data-collapsed="true">
+		<h4>Heading</h4>	    	
+			<ul data-role="listview">
+				<li><a href="#">1</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">1</a></li>
+
+			</ul>
+		</div>
+	</div><!-- /content -->
+	
+	<a href="#page0" class="ui-btn ui-icon-home ui-btn-icon-left">Volver</a>
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h4>APP desarrollada en el ViveLab de Acacias 2015</h4>
+	</div><!-- /footer -->	
+</div><!-- /page -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v3.19.0/build/ol.js"></script>
+    <!--<script src="http://dev.openlayers.org/OpenLayers.js" type="text/javascript"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script> esta libreria no es exclusivamente necesaria--> 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/PuntosDeUbucación.js"></script>
+    <script src="js/mapa.js" type="text/javascript"></script>
+</body>
+</html>
